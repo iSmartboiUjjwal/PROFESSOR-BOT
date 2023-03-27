@@ -253,7 +253,7 @@ async def start(client, message):
         protect_content=True if pre == 'filep' else False,
         )
     await message.reply_text(f'Delete in 10 minit')
-    asyncio.sleep(DELETE_TIME)
+    await asyncio.sleep(DELETE_TIME)
     await sodha.delete()
                     
 
