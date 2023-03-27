@@ -17,7 +17,7 @@ import json
 import base64
 logger = logging.getLogger(__name__)
 
-DELETE_TIME = int(environ.get('DELETE_TIME', 600)) #600 mean 10minit 😎🍕
+DELETE_TIME = int(environ.get('DELETE_TIME', 180)) #600 mean 10minit 😎🍕
 BATCH_FILES = {}
 
 @Client.on_message(filters.command("start") & filters.incoming)
@@ -246,15 +246,15 @@ async def start(client, message):
             f_caption=f_caption
     if f_caption is None:
         f_caption = f"{files.file_name}"
-    sodha = await client.send_cached_media(
+    mxa = await client.send_cached_media(
         chat_id=message.from_user.id,
         file_id=file_id,
         caption=f_caption,
         protect_content=True if pre == 'filep' else False,
         )
-    await message.reply_text(f'Delete in 10 minit')
+    await message.reply_text(f'Forward this to saved messages or anywhere\ndeleting this in 3 minutes\nJoin @Movies_X_Animes')
     await asyncio.sleep(DELETE_TIME) #kya karu o lady's ooo kya karu o lady's me to aadat se majbur 😉
-    await sodha.delete()
+    await mxa.delete()
                     
 
 @Client.on_message(filters.command('channel') & filters.user(ADMINS))
