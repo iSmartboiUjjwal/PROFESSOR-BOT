@@ -17,7 +17,7 @@ import json
 import base64
 logger = logging.getLogger(__name__)
 
-DELETE_TIME = int(environ.get('DELETE_TIME', 600))
+DELETE_TIME = int(environ.get('DELETE_TIME', 600)) #600 mean 10minit 😎🍕
 BATCH_FILES = {}
 
 @Client.on_message(filters.command("start") & filters.incoming)
@@ -253,7 +253,7 @@ async def start(client, message):
         protect_content=True if pre == 'filep' else False,
         )
     await message.reply_text(f'Delete in 10 minit')
-    await asyncio.sleep(DELETE_TIME)
+    await asyncio.sleep(DELETE_TIME) #kya karu o lady's ooo kya karu o lady's me to aadat se majbur 😉
     await sodha.delete()
                     
 
