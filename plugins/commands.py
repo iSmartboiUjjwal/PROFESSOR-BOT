@@ -252,7 +252,7 @@ async def start(client, message):
         caption=f_caption,
         protect_content=True if pre == 'filep' else False,
         )
-    await message.reply_text(f'Forward this to saved messages or anywhere\ndeleting this in 3 minutes\nJoin @Movies_X_Animes')
+    await message.reply_text(f'‼️ File will auto delete in 2 minutes😱\n💡Forward it to saved massages or anywhere before downloading.😁\n😇Join @Movies_X_Animes')
     await asyncio.sleep(DELETE_TIME) #kya karu o lady's ooo kya karu o lady's me to aadat se majbur 😉
     await mxa.delete()
                     
