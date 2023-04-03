@@ -1,4 +1,4 @@
-# Kanged From https://github.com/KDBotz/LUCIFER
+
 
 import pymongo
 from info import DATABASE_URI, DATABASE_NAME
