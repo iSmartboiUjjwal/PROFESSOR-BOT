@@ -817,7 +817,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
             InputMediaPhoto(random.choice(PICS), script.CARB_TXT, enums.ParseMode.HTML),
             reply_markup=reply_markup,
         )      
-    elif query.data == "fond":
+    elif query.data == "font":
         buttons = [[
             InlineKeyboardButton('𝙱𝙰𝙲𝙺', callback_data='help')
         ]]
